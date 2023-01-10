@@ -1,7 +1,11 @@
+import GlobalStyle from "./assets/GlobalStyle";
+import HotelManoah from "./components/HotelManoah";
+
 function App() {
   return (
     <>
-     <h1>App.js</h1> 
+      <GlobalStyle />
+      <HotelManoah />
     </>
   );
 }
