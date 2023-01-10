@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Gnb } from "./WebStyle";
 
 const Header = () => {

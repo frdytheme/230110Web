@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { FooterDiv } from "./WebStyle";
 
 const Footer = () => {

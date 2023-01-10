@@ -5,6 +5,9 @@ import shopping from "../components/images/shoppingbag.png";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    --swiper-theme-color: #414141;
+}
   * {
     box-sizing: border-box;
   }
@@ -13,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     opacity: 1;
   }
   }
-  html {
+  body {
   font-family: 'Noto Serif KR', serif, 'Roboto', 'Noto Sans KR', sans-serif;
   text-align: center;
   line-height: 1.6;
