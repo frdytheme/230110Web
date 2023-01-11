@@ -1,22 +1,19 @@
 {
   "files": {
     "main.css": "/230110Web/static/css/main.32f81bc4.css",
-    "main.js": "/230110Web/static/js/main.2d387c6f.js",
-    "static/media/video.mp4": "/230110Web/static/media/video.c960130350ea3b97034f.mp4",
-    "static/media/mainBnr_02.jpg": "/230110Web/static/media/mainBnr_02.a8be4dc2764be5345e76.jpg",
+    "main.js": "/230110Web/static/js/main.35bb193d.js",
     "static/media/magazine_img1.jpg": "/230110Web/static/media/magazine_img1.8724b74321a5fa1a13f7.jpg",
     "static/media/magazine_img4.jpg": "/230110Web/static/media/magazine_img4.2a7b114ddcc131788308.jpg",
-    "static/media/mainBnr_01.jpg": "/230110Web/static/media/mainBnr_01.9c8f6e2f79c0eea836c6.jpg",
     "static/media/magazine_img3.jpg": "/230110Web/static/media/magazine_img3.e0de3f807edba7314b6e.jpg",
     "static/media/magazine_img2.jpg": "/230110Web/static/media/magazine_img2.6320b65c65bd7fdb5b63.jpg",
     "index.html": "/230110Web/index.html",
     "static/media/conversation.svg": "/230110Web/static/media/conversation.3943b1f2b4811a69eb1d3061c5b97cf4.svg",
     "static/media/heart.svg": "/230110Web/static/media/heart.9ad19fb26fb44a649226c5be867dfded.svg",
     "main.32f81bc4.css.map": "/230110Web/static/css/main.32f81bc4.css.map",
-    "main.2d387c6f.js.map": "/230110Web/static/js/main.2d387c6f.js.map"
+    "main.35bb193d.js.map": "/230110Web/static/js/main.35bb193d.js.map"
   },
   "entrypoints": [
     "static/css/main.32f81bc4.css",
-    "static/js/main.2d387c6f.js"
+    "static/js/main.35bb193d.js"
   ]
 }
