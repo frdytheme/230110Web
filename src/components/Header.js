@@ -1,9 +1,28 @@
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 import { Gnb } from "./WebStyle";
 
+
+
 const Header = () => {
+  const [scrollY, setScrollY] = useState(window.scrollY)
+  const [gnbChange, setGnbChange] = useState({})
+  const followStyle = {
+    padding: "40px 6.5vw 40px",
+    position: "fixed",
+    boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
+  }
+  useEffect(()=>{
+    window.addEventListener('scroll', () => {
+      setScrollY(window.scrollY)
+    });
+  },[])
+  useEffect(()=>{
+    scrollY > 0 ? setGnbChange(followStyle) : setGnbChange({})
+  },[scrollY])
   return (
     <>
-      <Gnb>
+      <Gnb style={gnbChange}>
         <li>
           <h1>
             <a href="#">호텔마노아</a>

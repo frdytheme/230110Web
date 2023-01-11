@@ -1,12 +1,20 @@
-import ProductDetail from "./ProductDetail";
+import { useRef, useState } from "react";
+import Article3Set1 from "./Article3Set1";
+import Article3Set2 from "./Article3Set2";
+import Article3Set3 from "./Article3Set3";
 import { Container3 } from "./WebStyle";
 
 const Article3 = ({ path }) => {
-  const data = [
-    { id: 1, url: "/images/02.jpg" },
-    { id: 2, url: "/images/03.jpg" },
-    { id: 3, url: "/images/04.jpg" },
-  ];
+  const [number, setNumber] = useState(0);
+  const itemSet = [
+    <Article3Set1 path={path} />,
+    <Article3Set2 path={path} />,
+    <Article3Set3 path={path} />,
+    <Article3Set1 path={path} />,
+    <Article3Set2 path={path} />,
+  ]
+  
+
   return (
     <>
       <Container3>
@@ -15,28 +23,18 @@ const Article3 = ({ path }) => {
           <h2>호텔마노아 베스트</h2>
         </div>
         <div className="category">
-          <a href="#">#신혼맞춤</a>
-          <a href="#">#홈인테리어</a>
-          <a href="#">#테이블웨어</a>
-          <a href="#">#세라믹</a>
-          <a href="#">#Etc</a>
+          <a href="#" style={number === 0 ? {color:"#333"} : {color:"#BBB"}}>#신혼맞춤</a>
+          <a href="#" style={number === 1 ? {color:"#333"} : {color:"#BBB"}}>#홈인테리어</a>
+          <a href="#" style={number === 2 ? {color:"#333"} : {color:"#BBB"}}>#테이블웨어</a>
+          <a href="#" style={number === 3 ? {color:"#333"} : {color:"#BBB"}}>#세라믹</a>
+          <a href="#" style={number === 4 ? {color:"#333"} : {color:"#BBB"}}>#Etc</a>
         </div>
         <div className="product_container">
           <div className="arrow_box">
-            <span className="material-symbols-outlined"> arrow_back_ios </span>
-            <span className="material-symbols-outlined"> arrow_forward_ios </span>
+            <span className="material-symbols-outlined" onClick={()=>setNumber(number > 0 ? number - 1 : itemSet.length - 1)}> arrow_back_ios </span>
+            <span className="material-symbols-outlined" onClick={()=>setNumber(number < itemSet.length - 1 ? number + 1 : 0)}> arrow_forward_ios </span>
           </div>
-          {data.map((item) => {
-            return (
-              <div className="product_box" key={item.id}>
-                <div className="best">BEST1</div>
-                <a href="#">
-                  <img src={path + item.url} alt={`이미지${item.id}`} />
-                </a>
-                <ProductDetail />
-              </div>
-            );
-          })}
+          {itemSet[number]}
         </div>
       </Container3>
     </>

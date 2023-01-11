@@ -1,8 +1,6 @@
 import { Company } from "./WebStyle";
-import insta from "./images/insta.png";
-import facebook from "./images/facebook.png";
 
-const CompanyInfo = () => {
+const CompanyInfo = ({path}) => {
   return (
     <>
       <Company>
@@ -32,10 +30,10 @@ const CompanyInfo = () => {
           <li>(토, 일, 공휴일 휴무)</li>
           <li>
             <a href="#">
-              <img src={insta} alt="인스타" />
+              <img src={path + "/images/insta.png"} alt="인스타" />
             </a>
             <a href="#">
-              <img src={facebook} alt="페북" style={{ width: "9px" }} />
+              <img src={path + "/images/facebook.png"} alt="페북" style={{ width: "9px" }} />
             </a>
           </li>
         </ul>

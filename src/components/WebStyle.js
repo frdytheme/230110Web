@@ -6,18 +6,22 @@ import article6Img4 from "./images/magazine_img4.jpg";
 import heart from "./images/heart.svg";
 import conversation from "./images/conversation.svg";
 
+
 // Header Style
 export const Gnb = styled.ul`
   width: 1920px;
-  padding-left: 6.5vw;
+  padding: 100px 6.5vw 60px;
   height: 80px;
   background-color: #fff;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  position: fixed;
+  position: absolute;
+  /*  */
+  /*  */
   top: 0;
   z-index: 9999;
+  transition: .7s;
   & > li {
     position: relative;
     &:first-child {
@@ -106,7 +110,7 @@ export const Gnb = styled.ul`
 // Main Style
 export const Container1 = styled.article`
   width: 87vw;
-  margin: 80px auto 70px;
+  margin: 160px auto 70px;
   .mainBtn {
     display: flex;
     justify-content: center;
@@ -182,6 +186,7 @@ export const Container3 = styled.article`
         opacity: 0;
         transition: 0.3s;
         transform: translateX(-30px);
+        user-select:none;
         &:last-child {
           transform: translateX(30px);
         }
@@ -193,6 +198,7 @@ export const Container3 = styled.article`
     }
     .product_box {
       position: relative;
+      transition: .4s;
       .best {
         border-radius: 50%;
         background-color: #333;
@@ -213,10 +219,10 @@ export const Container3 = styled.article`
         border-radius: 50%;
         overflow: hidden;
         position: relative;
-      }
-      &:hover .popUp span {
-        pointer-events: all;
-        opacity: 1;
+        &:hover + .popUp span {
+          pointer-events: all;
+          opacity: 1;
+        }
       }
     }
   }
@@ -254,7 +260,7 @@ export const Container5 = styled.article`
     width: 80vw;
     height: 530px;
     position: absolute;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -265,20 +271,22 @@ export const Container5 = styled.article`
 `;
 export const Container6 = styled.article`
   .magazine {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
     li > a {
-      width: 360px;
+      width: 100%;
       height: 360px;
       text-indent: -9999px;
       background: no-repeat 50% / cover;
     }
     li {
+      width: 23%;
       transition: 0.3s;
       &:hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
       }
       &:nth-child(1) > a {
         background-image: url(${article6Img1});
@@ -364,12 +372,20 @@ export const InstaFeed = styled.div`
       height: 200px;
       background-color: #f1f1f1;
       position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: top;
+      }
       &:hover::after {
         content: "";
-        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 200px;
         height: 200px;
-        background: #999 url(${heart}) no-repeat 40% 50% / 15px 15px;
+        background: url(${conversation}) no-repeat 60% 50% / 15px 15px;
       }
       &:hover::before {
         content: "";
@@ -378,7 +394,8 @@ export const InstaFeed = styled.div`
         left: 0;
         width: 200px;
         height: 200px;
-        background: url(${conversation}) no-repeat 60% 50% / 15px 15px;
+        display: block;
+        background: rgba(9, 9, 9, 0.7) url(${heart}) no-repeat 40% 50% / 15px 15px;
       }
     }
   }

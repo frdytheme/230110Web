@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
   text-align: center;
   line-height: 1.6;
   font-weight: 300;
+  overflow-x:hidden;
   }
   h2 {
     margin: 20px 0;
@@ -80,22 +81,17 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .viewMore {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 17px 0 0;
+    margin: 17px 0;
     font-size: 10px;
     font-weight: 300;
     letter-spacing: 0.05em;
     transition: .2s cubic-bezier(.49, .06, .08, 1);
   }
-  
   .viewMore span {
     font-size: 20px;
     color: #bbb;
     vertical-align: top;
   }
-  
   .viewMore:hover {
     transform: translateX(7px);
   }
@@ -156,7 +152,6 @@ const GlobalStyle = createGlobalStyle`
     }
     }
   }
-
   `;
 
 export default GlobalStyle;

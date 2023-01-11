@@ -11,14 +11,14 @@ const Main = () => {
   const path = process.env.PUBLIC_URL;
   return (
     <>
-      <Article1 />
+      <Article1 path={path} />
       <Article2 path={path} />
       <Article3 path={path} />
       <Article4 path={path} />
-      <Article5 />
+      <Article5 path={path}/>
       <Article6 />
       <InstagramFeed />
-      <CompanyInfo />
+      <CompanyInfo path={path} />
     </>
   );
 };

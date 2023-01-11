@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductDetail from "./ProductDetail";
 import { Container4 } from "./WebStyle";
 
@@ -8,6 +9,7 @@ const Article4 = ({ path }) => {
     { id: 3, url: "/images/05.jpg" },
     { id: 4, url: "/images/05_big.jpg" },
   ];
+  const [changeImg, setChangeImg] = useState(true);
   return (
     <>
       <Container4>
@@ -18,9 +20,18 @@ const Article4 = ({ path }) => {
         <div className="product_container">
           {data.map((item) => {
             return (
-              <div className="product_box" key={item.id}>
+              <div
+                className="product_box"
+                key={item.id}
+                // onMouseEnter={(e) => }
+                
+                >
                 <a href="#">
-                  <img src={path + item.url} alt={`이미지4${item.id}`} />
+                  {changeImg ? (
+                    <img src={path + item.url} alt={`이미지4${item.id}`} />
+                  ) : (
+                    <img src={path + "/images/05_big.jpg"} />
+                  )}
                 </a>
                 <ProductDetail />
               </div>
