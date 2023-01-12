@@ -17,12 +17,13 @@ export const FixedBtnStyle = styled.div`
   border-radius: 30px;
   z-index: 9999;
   background-color: #fff;
-  a {
+  div {
     width: 42px;
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     &:first-child {
       border-bottom: 1px solid #ddd;
     }
@@ -42,11 +43,12 @@ export const Gnb = styled.ul`
   display: flex;
   align-items: center;
   position: absolute;
-  /*  */
-  /*  */
   top: 0;
   z-index: 9999;
   transition: 0.7s;
+  div {
+    cursor: pointer;
+  }
   & > li {
     position: relative;
     &:first-child {
@@ -81,7 +83,7 @@ export const Gnb = styled.ul`
         display: flex;
         align-items: center;
       }
-      li a span {
+      li div span {
         color: #000;
         font-size: 27px;
       }
@@ -92,7 +94,7 @@ export const Gnb = styled.ul`
       color: rgb(155, 155, 155);
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       padding: 10px;
-      & li:hover a {
+      & li:hover div {
         background-color: #eee;
         color: #000;
       }
@@ -114,13 +116,13 @@ export const Gnb = styled.ul`
     border-radius: 7px;
     opacity: 0;
     pointer-events: none;
-    li a {
+    li div {
       height: 25px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    li:hover a {
+    li:hover div {
       width: 100%;
       background-color: #000;
     }
@@ -193,7 +195,7 @@ export const Container3 = styled.article`
     font-size: 22px;
     color: #bbb;
     padding-bottom: 35px;
-    a {
+    div {
       margin: 0 15px;
     }
   }
@@ -252,10 +254,10 @@ export const Container3 = styled.article`
         border-radius: 50%;
         overflow: hidden;
         position: relative;
-        &:hover + .popUp span {
-          pointer-events: all;
-          opacity: 1;
-        }
+      }
+      &:hover .popUp span {
+        pointer-events: all;
+        opacity: 1;
       }
     }
   }
@@ -416,7 +418,9 @@ export const InstaFeed = styled.div`
     &:hover::-webkit-scrollbar-thumb {
       background-color: #999;
     }
-    .box a {
+    .box span {
+      display: block;
+      cursor: pointer;
       font-size: 0;
       margin: 5px;
       width: 200px;

@@ -22,21 +22,21 @@ const Article3 = ({ path, scrollStyle }) => {
             <h2>호텔마노아 베스트</h2>
           </div>
           <div className="category">
-            <a href="#" style={number === 0 ? { color: "#333" } : { color: "#BBB" }}>
+            <div style={number === 0 ? { color: "#333" } : { color: "#BBB" }}>
               #신혼맞춤
-            </a>
-            <a href="#" style={number === 1 ? { color: "#333" } : { color: "#BBB" }}>
+            </div>
+            <div style={number === 1 ? { color: "#333" } : { color: "#BBB" }}>
               #홈인테리어
-            </a>
-            <a href="#" style={number === 2 ? { color: "#333" } : { color: "#BBB" }}>
+            </div>
+            <div style={number === 2 ? { color: "#333" } : { color: "#BBB" }}>
               #테이블웨어
-            </a>
-            <a href="#" style={number === 3 ? { color: "#333" } : { color: "#BBB" }}>
+            </div>
+            <div style={number === 3 ? { color: "#333" } : { color: "#BBB" }}>
               #세라믹
-            </a>
-            <a href="#" style={number === 4 ? { color: "#333" } : { color: "#BBB" }}>
+            </div>
+            <div style={number === 4 ? { color: "#333" } : { color: "#BBB" }}>
               #Etc
-            </a>
+            </div>
           </div>
           <div className="product_container">
             <div className="arrow_box">

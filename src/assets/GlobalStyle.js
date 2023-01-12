@@ -1,7 +1,7 @@
 import reset from "styled-reset";
 import { createGlobalStyle } from "styled-components";
-import likes from "../components/images/like.png";
-import shopping from "../components/images/shoppingbag.png";
+import likes from "../images/like.png";
+import shopping from "../images/shoppingbag.png";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

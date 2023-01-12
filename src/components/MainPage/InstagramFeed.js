@@ -5,7 +5,7 @@ import axios from "axios";
 const InstagramFeed = ({ scrollStyle }) => {
   const [img, setImg] = useState([]);
   useEffect(() => {
-    const URL = "https://pixabay.com/api/?key=11387821-67a69d50b056e2710953ad188&q=white+texture&image_type=photo";
+    const URL = "https://pixabay.com/api/?key=11387821-67a69d50b056e2710953ad188&q=grey+pattern&image_type=photo";
     axios.get(URL).then((json) => setImg(json.data.hits));
   }, []);
   return (
@@ -20,9 +20,9 @@ const InstagramFeed = ({ scrollStyle }) => {
             {img.map((item, idx) => {
               return (
                 <div className="box" key={idx}>
-                  <a href="#">
+                  <span>
                     <img src={item.largeImageURL} alt={item.tags} />{" "}
-                  </a>
+                  </span>
                 </div>
               );
             })}

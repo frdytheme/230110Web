@@ -13,12 +13,12 @@ const FixedBtn = () => {
   return (
     <>
       <FixedBtnStyle>
-        <a href="#" onClick={scrollTop}>
+        <div href="#" onClick={scrollTop}>
           <span className="material-symbols-outlined"> expand_less </span>
-        </a>
-        <a href="#" onClick={scrollBottom}>
+        </div>
+        <div href="#" onClick={scrollBottom}>
           <span className="material-symbols-outlined"> expand_more </span>
-        </a>
+        </div>
       </FixedBtnStyle>
     </>
   );

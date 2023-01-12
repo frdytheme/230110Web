@@ -18,105 +18,105 @@ const Header = ({scrollY}) => {
       <Gnb style={gnbChange}>
         <li>
           <h1>
-            <a href="#">호텔마노아</a>
+            <div>호텔마노아</div>
           </h1>
         </li>
         <li>
-          <a href="#">호텔마노아</a>
+          <div>호텔마노아</div>
           <ul className="innerGnb Snb">
             <li>
-              <a href="#">브랜드 소개</a>
+              <div>브랜드 소개</div>
             </li>
             <li>
-              <a href="#">오시는 길</a>
+              <div>오시는 길</div>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">제품라인</a>
+          <div>제품라인</div>
           <ul className="innerGnb Snb">
             <li>
-              <a href="#">중분류1</a>
+              <div>중분류1</div>
             </li>
             <li>
-              <a href="#">중분류2</a>
+              <div>중분류2</div>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">홈인테리어</a>
+          <div>홈인테리어</div>
           <ul className="innerGnb Snb">
             <li>
-              <a href="#">가구/수납</a>
+              <div>가구/수납</div>
             </li>
             <li>
-              <a href="#">패브릭/생활</a>
+              <div>패브릭/생활</div>
             </li>
             <li>
-              <a href="#">키친</a>
+              <div>키친</div>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">테이블웨어</a>
+          <div>테이블웨어</div>
           <ul className="innerGnb Snb">
             <li>
-              <a href="#">주방수납</a>
+              <div>주방수납</div>
             </li>
             <li>
-              <a href="#">디자이너 그릇</a>
+              <div>디자이너 그릇</div>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#">세라믹</a>
+          <div>세라믹</div>
         </li>
         <li id="line">구분선</li>
         <li>
-          <a href="#">공지사항</a>
+          <div>공지사항</div>
         </li>
         <li>
-          <a href="#">이벤트</a>
+          <div>이벤트</div>
         </li>
         <li>
-          <a href="#">상품 사용후기</a>
+          <div>상품 사용후기</div>
         </li>
         <li>
-          <a href="#">상품 Q&A</a>
+          <div>상품 Q&A</div>
         </li>
         <li id="user_info">
           <ul>
             <li>
-              <a href="#">
+              <div>
                 <span className="material-symbols-outlined">person</span>
-              </a>
+              </div>
               <ul className="innerGnb">
                 <li>
-                  <a href="#">로그인</a>
+                  <div>로그인</div>
                 </li>
                 <li>
-                  <a href="#">회원가입</a>
+                  <div>회원가입</div>
                 </li>
                 <li>
-                  <a href="#">장바구니</a>
+                  <div>장바구니</div>
                 </li>
                 <li>
-                  <a href="#">주문조회</a>
+                  <div>주문조회</div>
                 </li>
                 <li>
-                  <a href="#">마이페이지</a>
+                  <div>마이페이지</div>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#">
+              <div>
                 <span className="material-symbols-outlined">shopping_bag</span>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="#">
+              <div>
                 <span className="material-symbols-outlined">search</span>
-              </a>
+              </div>
             </li>
           </ul>
         </li>
