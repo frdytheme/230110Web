@@ -1,7 +1,7 @@
 import Article2TxtBox from "./Article2TxtBox";
-import { Container2 } from "./WebStyle";
+import { Container2 } from "../WebStyle";
 
-const Article2 = ({ path }) => {
+const Article2 = ({ path, scrollStyle }) => {
   const data = [
     { id: 1, url: "/images/bnrArea2_01.jpg" },
     { id: 2, url: "/images/bnrArea2_02.jpg" },
@@ -12,7 +12,7 @@ const Article2 = ({ path }) => {
       <Container2>
         {data.map((item) => {
           return (
-            <div className="img_box" key={item.id}>
+            <div className="img_box" key={item.id} style={scrollStyle(800)}>
               <a href="#">
                 <img src={path + item.url} alt={`image ${item.id}`} />
               </a>

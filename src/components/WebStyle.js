@@ -1,11 +1,36 @@
 import styled from "styled-components";
-import article6Img1 from "./images/magazine_img1.jpg";
-import article6Img2 from "./images/magazine_img2.jpg";
-import article6Img3 from "./images/magazine_img3.jpg";
-import article6Img4 from "./images/magazine_img4.jpg";
-import heart from "./images/heart.svg";
-import conversation from "./images/conversation.svg";
+import article6Img1 from "../images/magazine_img1.jpg";
+import article6Img2 from "../images/magazine_img2.jpg";
+import article6Img3 from "../images/magazine_img3.jpg";
+import article6Img4 from "../images/magazine_img4.jpg";
+import heart from "../images/heart.svg";
+import conversation from "../images/conversation.svg";
+import art4Img1 from "../images/02.jpg";
 
+// FixedBtn
+export const FixedBtnStyle = styled.div`
+  position: fixed;
+  top: 50%;
+  right: 1.5vw;
+  transform: translateY(-50%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 30px;
+  z-index: 9999;
+  background-color: #fff;
+  a {
+    width: 42px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:first-child {
+      border-bottom: 1px solid #ddd;
+    }
+    span {
+      color: #aaa;
+    }
+  }
+`;
 
 // Header Style
 export const Gnb = styled.ul`
@@ -21,7 +46,7 @@ export const Gnb = styled.ul`
   /*  */
   top: 0;
   z-index: 9999;
-  transition: .7s;
+  transition: 0.7s;
   & > li {
     position: relative;
     &:first-child {
@@ -100,7 +125,8 @@ export const Gnb = styled.ul`
       background-color: #000;
     }
   }
-  & > li:hover .innerGnb {
+  & > li:hover .Snb,
+  #user_info ul > li:hover .innerGnb {
     animation: vision 0.4s forwards;
     animation-play-state: running;
     pointer-events: all;
@@ -111,6 +137,13 @@ export const Gnb = styled.ul`
 export const Container1 = styled.article`
   width: 87vw;
   margin: 160px auto 70px;
+  position: relative;
+  img:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 0.7s;
+  }
   .mainBtn {
     display: flex;
     justify-content: center;
@@ -186,7 +219,7 @@ export const Container3 = styled.article`
         opacity: 0;
         transition: 0.3s;
         transform: translateX(-30px);
-        user-select:none;
+        user-select: none;
         &:last-child {
           transform: translateX(30px);
         }
@@ -198,7 +231,7 @@ export const Container3 = styled.article`
     }
     .product_box {
       position: relative;
-      transition: .4s;
+      transition: 0.4s;
       .best {
         border-radius: 50%;
         background-color: #333;
@@ -234,8 +267,26 @@ export const Container4 = styled.article`
     display: flex;
     padding: 0 100px;
   }
-  .product_box {
+  .imgBox {
     position: relative;
+    cursor: pointer;
+    & > a {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.4s;
+        opacity: 0;
+        background: url(${art4Img1}) no-repeat 50% / cover;
+      }
+    }
+    &:hover a::after {
+      opacity: 1;
+    }
     &:hover .popUp span {
       pointer-events: all;
       opacity: 1;

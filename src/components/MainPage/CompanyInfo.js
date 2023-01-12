@@ -1,4 +1,4 @@
-import { Company } from "./WebStyle";
+import { Company } from "../WebStyle";
 
 const CompanyInfo = ({path}) => {
   return (

@@ -1,22 +1,15 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
 import { Gnb } from "./WebStyle";
 
 
 
-const Header = () => {
-  const [scrollY, setScrollY] = useState(window.scrollY)
+const Header = ({scrollY}) => {
   const [gnbChange, setGnbChange] = useState({})
   const followStyle = {
     padding: "40px 6.5vw 40px",
     position: "fixed",
     boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px",
   }
-  useEffect(()=>{
-    window.addEventListener('scroll', () => {
-      setScrollY(window.scrollY)
-    });
-  },[])
   useEffect(()=>{
     scrollY > 0 ? setGnbChange(followStyle) : setGnbChange({})
   },[scrollY])
@@ -30,7 +23,7 @@ const Header = () => {
         </li>
         <li>
           <a href="#">호텔마노아</a>
-          <ul className="innerGnb">
+          <ul className="innerGnb Snb">
             <li>
               <a href="#">브랜드 소개</a>
             </li>
@@ -41,7 +34,7 @@ const Header = () => {
         </li>
         <li>
           <a href="#">제품라인</a>
-          <ul className="innerGnb">
+          <ul className="innerGnb Snb">
             <li>
               <a href="#">중분류1</a>
             </li>
@@ -52,7 +45,7 @@ const Header = () => {
         </li>
         <li>
           <a href="#">홈인테리어</a>
-          <ul className="innerGnb">
+          <ul className="innerGnb Snb">
             <li>
               <a href="#">가구/수납</a>
             </li>
@@ -66,7 +59,7 @@ const Header = () => {
         </li>
         <li>
           <a href="#">테이블웨어</a>
-          <ul className="innerGnb">
+          <ul className="innerGnb Snb">
             <li>
               <a href="#">주방수납</a>
             </li>

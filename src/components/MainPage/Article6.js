@@ -1,6 +1,6 @@
-import { Container6 } from "./WebStyle";
+import { Container6 } from "../WebStyle";
 
-const Article6 = () => {
+const Article6 = ({scrollStyle}) => {
   const data = [
     { id: 1, des: "안락함을 느낄 수 있는 디자인" },
     { id: 2, des: "예술적 영감을 디자인으로 불어 넣는 것" },
@@ -10,11 +10,11 @@ const Article6 = () => {
   return (
     <>
       <Container6>
-        <div className="txtBox">
+        <div className="txtBox" style={scrollStyle(4300)}>
           <h4>Hotel Manoah Collection</h4>
           <h2 className="underLine">호텔마노아 매거진</h2>
         </div>
-        <ul className="magazine">
+        <ul className="magazine" style={scrollStyle(4700)}>
           {data.map((item) => {
             return (
               <li key={item.id}>
