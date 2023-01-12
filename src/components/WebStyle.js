@@ -453,6 +453,7 @@ export const InstaFeed = styled.div`
         width: 200px;
         height: 200px;
         background: url(${conversation}) no-repeat 60% 50% / 15px 15px;
+        z-index:9999;
       }
       &:hover::before {
         content: "";
@@ -463,6 +464,7 @@ export const InstaFeed = styled.div`
         height: 200px;
         display: block;
         background: rgba(9, 9, 9, 0.7) url(${heart}) no-repeat 40% 50% / 15px 15px;
+        z-index:9998;
       }
     }
   }
