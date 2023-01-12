@@ -12,9 +12,9 @@ const Article3Set2 = ({ path }) => {
         return (
           <div className="product_box" key={item.id}>
             <div className="best">BEST1</div>
-            <a href="#">
+            <span>
               <img src={path + item.url} alt={`이미지${item.id}`} />
-            </a>
+            </span>
             <ProductDetail />
           </div>
         );
