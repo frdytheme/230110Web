@@ -44,6 +44,8 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
   .subTitle {
+    display: block;
+    cursor:pointer;
     font-size: 19px;
     color: #333;
     margin: 20px 0 10px;
@@ -86,6 +88,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
     letter-spacing: 0.05em;
     transition: .2s cubic-bezier(.49, .06, .08, 1);
+    cursor: pointer;
   }
   .viewMore span {
     font-size: 20px;

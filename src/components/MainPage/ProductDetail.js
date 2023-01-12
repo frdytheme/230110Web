@@ -8,9 +8,9 @@ const ProductDetail = () => {
         <span>장바구니</span>
       </div>
       <div className="product_info">
-        <a href="#" className="subTitle">
+        <span className="subTitle">
           쓰임 레고트 도자기 면기
-        </a>
+        </span>
         <p className="subTxt">
           고객의 마음을 끄는 담백하고 정돈된 디자인,
           <br />

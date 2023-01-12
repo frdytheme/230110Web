@@ -9,10 +9,10 @@ const TxtBox = () => {
           <br />
           과장이나 거짓 없이, 자연이 만들어 내듯 정성을 가득 담아 품질로 표현하겠습니다.
         </h3>
-        <a href="#" className="viewMore">
+        <div className="viewMore">
           view more
           <span className="material-symbols-outlined"> chevron_right </span>
-        </a>
+        </div>
       </div>
     </>
   );

@@ -167,7 +167,11 @@ export const Container2 = styled.article`
   align-items: center;
   .img_box {
     margin: 10px;
-    &:hover a img {
+    & > span {
+      display: block;
+      cursor: pointer;
+    }
+    &:hover span img {
       opacity: 0.7;
     }
     .txt_box p {
@@ -180,6 +184,9 @@ export const Container2 = styled.article`
         font-weight: 300;
       }
     }
+  }
+  span {
+    cursor: pointer;
   }
 `;
 export const Container3 = styled.article`
@@ -197,6 +204,8 @@ export const Container3 = styled.article`
     padding-bottom: 35px;
     div {
       margin: 0 15px;
+      cursor: pointer;
+      user-select: none;
     }
   }
   .product_container {
@@ -247,7 +256,9 @@ export const Container3 = styled.article`
         left: 30px;
         z-index: 9999;
       }
-      & > a {
+      & > span {
+        display: block;
+        cursor: pointer;
         width: 370px;
         height: 370px;
         margin: 0 25px;
@@ -272,8 +283,9 @@ export const Container4 = styled.article`
   .imgBox {
     position: relative;
     cursor: pointer;
-    & > a {
+    & > span {
       position: relative;
+      display: block;
       &::after {
         content: "";
         position: absolute;
@@ -286,7 +298,7 @@ export const Container4 = styled.article`
         background: url(${art4Img1}) no-repeat 50% / cover;
       }
     }
-    &:hover a::after {
+    &:hover span::after {
       opacity: 1;
     }
     &:hover .popUp span {

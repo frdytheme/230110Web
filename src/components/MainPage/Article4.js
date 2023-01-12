@@ -21,9 +21,9 @@ const Article4 = ({ path, scrollStyle }) => {
               return (
                 <div className="product_box" key={item.id}>
                   <div className="imgBox">
-                  <a href="#">
+                  <span>
                     <img src={path + item.url} alt={`이미지4${item.id}`} />
-                  </a>
+                  </span>
                   <ProductDetail />
                   </div>
                 </div>

@@ -13,9 +13,9 @@ const Article2 = ({ path, scrollStyle }) => {
         {data.map((item) => {
           return (
             <div className="img_box" key={item.id} style={scrollStyle(800)}>
-              <a href="#">
+              <span>
                 <img src={path + item.url} alt={`image ${item.id}`} />
-              </a>
+              </span>
               <Article2TxtBox />
             </div>
           );
